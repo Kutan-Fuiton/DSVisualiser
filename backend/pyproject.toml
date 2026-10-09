@@ -1,0 +1,34 @@
+[project]
+name = "ds-visualizer-api"
+version = "1.0.0"
+description = "API for DS Visualizer"
+requires-python = ">=3.10"
+dependencies = [
+"fastapi[standard]",
+"uvicorn[standard]",
+"pydantic",
+"httpx",
+]
+
+[dependency-groups]
+dev = [
+"pytest",
+"ruff",
+"mypy",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+python_files = ["test_*.py"]
+
+[tool.ruff]
+line-length = 65535
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true

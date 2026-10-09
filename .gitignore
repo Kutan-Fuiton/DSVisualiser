@@ -1,0 +1,11 @@
+.venv/
+.env/
+env/
+__pycache__/
+*.pyc
+.env
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+node_modules/
+dist/
